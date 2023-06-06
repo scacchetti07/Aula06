@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+    margin: 0;
+}
+/* Container */
+#barra {
+    display: flex;
+    flex-direction: column;
+    /* Quebrar os itens em multiplas linhas */
+    flex-wrap: wrap;
+    /* alinhar os itens flexíveis. Stretch estica os itens para preencher */
+    align-items: stretch;
+}
+nav {
+    background-color: plum;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    /* alinhar os itens com espaços entre */
+    justify-content: space-around;
+    margin: 0%;
+    width: 100%;
+}
+nav ul li {
+    list-style-type: none; /* Remove a bolinha do ordenado */
+    padding: 20px;
+    color: white;
+    margin: 0;
+}
+nav ul li:hover {
+    background-color: rgb(137, 21, 148);
+}
+/* Não aparece imagem */
+nav ul li img {
+    display: none;
+}
+article {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+}
+/* Todas as imagens dos articles */
+article img {
+    width: 90%;
+}
+/* se for maximo de 600px */
+@media all and (max-width : 600px){
+#principal
+{
+    width: 100%; 
+}   
+#barra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+/* A imagem dos links */
+nav ul li img {
+    display: block;
+    width: 100%;
+}
+nav ul li span {
+    display: none;
+}
+article {
+    width: 80%;
+}
+
+}
